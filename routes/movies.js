@@ -25,6 +25,7 @@ moviesRouter.get('/:id', async (req, res) => {
 });
 
 moviesRouter.post('/', async (req, res) => {
+    // Create a movie
     console.log(req.body);
     const movie = mongoose.model('Movie', movieSchema);
     const newMovie = new movie({
