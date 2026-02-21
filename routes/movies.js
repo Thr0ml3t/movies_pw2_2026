@@ -5,6 +5,7 @@ import movieSchema from '../models/movie.js';
 const moviesRouter = express.Router();
 
 moviesRouter.get('/', async (req, res) => {
+    // Create a Mongoose model using the movie schema
     const movie = mongoose.model('Movie', movieSchema);
 
     const movies = await movie.find({});
