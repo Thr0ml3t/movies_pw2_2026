@@ -16,6 +16,7 @@ moviesRouter.get('/', async (req, res) => {
 });
 
 moviesRouter.get('/:id', async (req, res) => {
+    // Gets Movie By ID
     const movie = mongoose.model('Movie', movieSchema);
     const movieId = req.params.id;
     const foundMovie = await movie.findById(movieId);
